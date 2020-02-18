@@ -1,0 +1,28 @@
+<div class= "text-center text_font">
+    <h3><%= @spot.name %></h3>
+</div>
+<div class= "text-right">
+    <p>レビュー平均：<%= @average_review %></p>
+</div>
+
+<ul class="nav nav-tabs nav-justified mb-3">
+      <li class="nav-item"><a href="#" class="nav-link active">基本情報</a></li>
+      <li class="nav-item"><%= link_to 'レビュー', spot_review_spot_path(@spot) %></li>
+
+    </ul>
+<div class= "row">
+    <div class= "col-sm-6 offset-sm-2">
+        <%= image_tag @spot.image.url %>
+    </div>
+</div>
+        
+
+<div class= "text-center spot_information">
+    <p>名前:     <%= @spot.name %></p>
+    <p>都道府県:   <%= @spot.prefecture %></p>
+    <p>住所:     <%= @spot.address %></p>
+    <p>開店時間:     <%= @spot.time_open %></p>
+    <p>閉店時間:     <%= @spot.time_close %></p>
+    <p>定休日:     <%= @spot.day_close %></p>
+    <p>目安料金:     <%= @spot.money %></p>
+</div>

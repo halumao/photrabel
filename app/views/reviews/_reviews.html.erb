@@ -1,0 +1,29 @@
+<ul class="list-unstyled">
+    <% reviews.each.with_index(1) do |review| %>
+        
+      <div class= "row">
+        
+        <div class= "col-sm-5">
+          
+            <%= image_tag review.image.thumb.url %>
+          
+        </div>
+        <div class= "col-sm-6">
+          <div class= "review-block">
+            <div>
+              <h3><%= review.title %></h3>
+            </div>
+            <p>ユーザー名 <%= review.user.name %> 平均点数 <%= review.point %></p>
+            <%= link_to '詳細', review_path(review), class: 'btn btn-dark' %>
+            <% if current_user == review.user %>
+              <%= link_to '変更', edit_review_path(review), class: 'btn btn-dark' %>
+              <%= link_to '削除', review, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-danger' %>
+            <% end %>
+        </div>
+        </div>
+      </div>
+        
+    <% end %>
+    
+    
+</ul>

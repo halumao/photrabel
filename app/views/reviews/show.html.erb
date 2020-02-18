@@ -1,0 +1,20 @@
+<div class="text-center">
+    <h3>レビュー詳細</h3>
+</div>
+<div class="row">
+  <div class="col-sm-6 offset-sm-3">
+        <h4>タイトル：<%= @review.title %></h4>
+        
+        <p class= "text-right">評価：<%= @review.point %>点</p>
+        
+        <p class="border-bottom"></p>
+        <h5 class= "text-center">レビュー内容</h5>
+        <p>
+            <%= @review.content %>
+        </p>
+        
+        
+        
+     <%= link_to '前に戻る', :back, class: 'btn btn-dark' %>
+    </div>
+</div>

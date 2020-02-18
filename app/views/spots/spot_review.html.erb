@@ -1,0 +1,19 @@
+<div class= "text-center text_font">
+    <h3><%= @spot.name %></h3>
+</div>
+
+
+
+    <ul class="nav nav-tabs nav-justified mb-3">
+          <li class="nav-item"><%= link_to '基本情報', spot_path(@spot) %></li>
+          <li class="nav-item"><a href="#" class="nav-link active">レビュー</a></li>
+    
+    </ul>
+
+
+<div class= "text-center">
+    <%= link_to 'レビューの投稿', new_review_path(spot_id: @spot.id), class: 'btn btn-dark btn-block' %>
+
+<p class= "border_bottom"></p>
+
+<%= render 'reviews/reviews', reviews: @reviews %>

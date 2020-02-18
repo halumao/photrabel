@@ -1,0 +1,7 @@
+<p>観光地名検索</p>
+<%= form_tag(searchname_path,:method => 'get') do %>
+  <%= text_field_tag :search %>
+  <%= submit_tag 'Search', :name => nil %>
+<% end %>
+
+<%= render 'spots/spots', spots: @spots %>

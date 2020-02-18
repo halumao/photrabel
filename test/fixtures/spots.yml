@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  name: MyString
+  address: MyString
+  time_open: MyString
+  time_close: MyString
+  day_close: MyString
+  money: MyString
+  prefecture: MyString
+  image: MyString
+
+two:
+  user: two
+  name: MyString
+  address: MyString
+  time_open: MyString
+  time_close: MyString
+  day_close: MyString
+  money: MyString
+  prefecture: MyString
+  image: MyString

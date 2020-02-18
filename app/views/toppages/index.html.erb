@@ -1,0 +1,50 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container-fluid jumbotron-container">
+    <div class = "row">
+        <div class = "col-md-7">
+            <h1>Photrabel</h1>
+            <p class="lead">なんか良さげな文字的なものだよ！<br><br>後で考えるよ！</p>
+        </div>
+        <div class ="col-md-5 btn_margin">
+            <% unless logged_in? %>
+                <%= link_to '新規登録', signup_path, class: ' btn btn-dark btn-lg btn-block ' %>
+                <%= link_to 'ログイン', login_path, class: ' btn btn-dark btn-lg btn-block ' %>
+            <% end %>
+        </div>
+    </div>
+ 
+      
+  </div><!-- /.container -->
+</div><!-- /.jumbotron -->
+
+<p class = "border-bottom"></p>
+
+<div class = "user_box ">
+    <% if logged_in? %>
+        <p class = "text-center text_font　 ">ようこそ！<%= current_user.name %>さん</p>
+    <% else %>
+        <p class= "text-center text_font">ようこそ！ゲストさん</p>
+    <% end %>
+</div>
+<h5 class = "text_font">検索!</h5>
+<%= link_to '名称検索へ', searchname_path, class: ' btn btn-dark btn-lg btn-block ' %>
+<%= link_to '都道府県検索', searchpre_path, class: ' btn btn-dark btn-lg btn-block ' %>
+
+
+
+
+
+<p class = "border-bottom"></p>
+
+<h5 class = "text_font">ランキング！</h5>
+<%= link_to '高評価ランキング', ranking_path, class: 'btn btn-dark btn-block' %>
+<p class = "text-center text-muted">これからも追加していくよ！</p>
+
+<p class = "border-bottom"></p>
+
+<h5 class = "text_font">観光地の追加！</h5>
+<%= link_to '新しい観光地の追加', new_spot_path, class: ' btn btn-dark btn-lg btn-block ' %>
+
+<p class = "border-bottom"></p>
+
+<%= link_to 'Topへ>', root_url, class: 'top' %>

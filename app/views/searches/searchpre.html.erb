@@ -1,0 +1,7 @@
+<p>都道府県検索</p>
+<%= form_with(url: searchpre_path, method: :get, local: true) do |f| %>
+　　<%= f.select :search,Schema.delivery_areas.keys, {}, {class: 'hoge'} %>
+　　<%= f.submit '検索', class: 'btn btn-dark' %>
+<% end %>
+
+<%= render 'spots/spots', spots: @spots %>
